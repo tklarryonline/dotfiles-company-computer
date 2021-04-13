@@ -25,5 +25,5 @@ brew install --cask iterm2
 brew tap homebrew/cask-fonts
 # Two of my favorite fonts
 brew install --cask font-fira-code-nerd-font
-brew install --cask font-jet-brains-mono-nerd-font
+brew install --cask font-jetbrains-mono-nerd-font
 ```
