@@ -111,3 +111,6 @@ source $ZSH/oh-my-zsh.sh
 
 # Enable Starship prompt
 eval "$(starship init zsh)"
+
+# Enable Redbubble's env
+source $HOME/.dotfiles/zsh/dev/redbubble.sh
