@@ -112,5 +112,12 @@ source $ZSH/oh-my-zsh.sh
 # Enable Starship prompt
 eval "$(starship init zsh)"
 
+# Set up NVM
+# See https://jamesauble.medium.com/install-nvm-on-mac-with-brew-adb921fb92cc
+export NVM_DIR="$HOME/.nvm"
+if [[ ! -e $NVM_DIR ]]; then
+  mkdir $NVM_DIR
+fi
+
 # Enable Redbubble's env
 source $HOME/.dotfiles/zsh/dev/redbubble.sh
