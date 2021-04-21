@@ -122,6 +122,3 @@ if [[ ! -e $NVM_DIR ]]; then
   mkdir $NVM_DIR
 fi
 source $(brew --prefix nvm)/nvm.sh
-
-# Enable Redbubble's env
-source $HOME/.dotfiles/zsh/dev/redbubble.sh
