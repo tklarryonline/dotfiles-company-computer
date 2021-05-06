@@ -122,3 +122,10 @@ if [[ ! -e $NVM_DIR ]]; then
   mkdir $NVM_DIR
 fi
 source $(brew --prefix nvm)/nvm.sh
+
+# Set up Ruby and enable auto switching of Ruby version
+source /usr/local/opt/chruby/share/chruby/chruby.sh
+source /usr/local/opt/chruby/share/chruby/auto.sh
+
+# Set up ImageMagick
+export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"
