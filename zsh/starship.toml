@@ -1,0 +1,5 @@
+# Configurations for Starship prompt
+# See https://starship.rs/config/
+
+# Inserts a blank line between shell prompts
+add_newline = true

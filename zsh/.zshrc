@@ -111,6 +111,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Enable Starship prompt
 eval "$(starship init zsh)"
+export STARSHIP_CONFIG=$HOME/.dotfiles/zsh/starship.toml
 
 # Enable direnv
 eval "$(direnv hook zsh)"
