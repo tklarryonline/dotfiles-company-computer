@@ -17,6 +17,9 @@ brew upgrade
 
 # Checks for brew status
 brew doctor
+
+# Automatically install all the things in Brewfile
+brew bundle install
 ```
 
 ### iTerm2 and terminal

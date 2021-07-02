@@ -110,6 +110,12 @@ fi
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# Custom setup
+# ================================================================================
+
+# Add Homebrew's "sbin" to PATH
+export PATH="/usr/local/sbin:$PATH"
+
 # Enable Starship prompt
 eval "$(starship init zsh)"
 export STARSHIP_CONFIG=$HOME/.dotfiles/zsh/starship.toml
@@ -137,7 +143,7 @@ export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"
 
 # Set up Pyenv
 if command -v pyenv 1>/dev/null 2>&1; then
-  eval "$(pyenv init -)"
+  eval "$(pyenv init --path)"
 fi
 
 # >>> conda initialize >>>
