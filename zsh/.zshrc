@@ -160,3 +160,10 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+
+# Setup Lastpass CLI Agent
+export LPASS_AGENT_TIMEOUT=0
+
+# Setup Google Cloud SDK
+source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc
+source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc
