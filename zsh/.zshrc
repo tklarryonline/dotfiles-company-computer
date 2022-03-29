@@ -109,6 +109,8 @@ fi
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias ys="yak staging"
+alias yp="yak production"
 
 # Custom setup
 # ================================================================================
@@ -152,11 +154,11 @@ __conda_setup="$('/Users/luannguyen/.pyenv/versions/anaconda3-2020.11/bin/conda'
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/Users/luannguyen/.pyenv/versions/anaconda3-2020.11/etc/profile.d/conda.sh" ]; then
-        . "/Users/luannguyen/.pyenv/versions/anaconda3-2020.11/etc/profile.d/conda.sh"
-    else
-        export PATH="/Users/luannguyen/.pyenv/versions/anaconda3-2020.11/bin:$PATH"
-    fi
+  if [ -f "/Users/luannguyen/.pyenv/versions/anaconda3-2020.11/etc/profile.d/conda.sh" ]; then
+      . "/Users/luannguyen/.pyenv/versions/anaconda3-2020.11/etc/profile.d/conda.sh"
+  else
+      export PATH="/Users/luannguyen/.pyenv/versions/anaconda3-2020.11/bin:$PATH"
+  fi
 fi
 unset __conda_setup
 # <<< conda initialize <<<
@@ -167,3 +169,11 @@ export LPASS_AGENT_TIMEOUT=0
 # Setup Google Cloud SDK
 source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc
 source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc
+
+# >>> kubectl auth >>>
+export KUBECONFIG="${KUBECONFIG:-${HOME}/.kube/config}:$(echo $(ls ${HOME}/.kube/rb-k8s-auth-pkg/*) | sed s/\ /:/g)"
+# <<< kubectl auth <<<
+
+# >>> LaTeX >>>
+export PATH="/usr/local/texlive/2021basic/bin/universal-darwin:$PATH"
+# <<< LaTeX <<<
