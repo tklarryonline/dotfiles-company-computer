@@ -1,5 +1,4 @@
 inoremap jk <Esc>
-inoremap kj <Esc>
 
 nnoremap <Tab> >>_
 nnoremap <S-Tab> <<_
